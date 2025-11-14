@@ -11,15 +11,15 @@ export const Hero = ({ onNavigate }: HeroProps) => {
         {/* Profile Image */}
         <div className="mb-8 inline-block">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-slate-800 shadow-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
+            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-slate-800 shadow-2xl bg-linear-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
               {/* Reemplaza con: <img src="/tu-foto.jpg" alt="Sergio" className="w-full h-full rounded-full object-cover" /> */}
               <span className="text-5xl md:text-6xl font-bold text-white">S</span>
             </div>
           </div>
         </div>
         
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
           Full Stack Developer
         </h2>
         
