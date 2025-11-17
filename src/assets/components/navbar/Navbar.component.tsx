@@ -5,18 +5,52 @@ import { navItems, type NavbarProps } from './navbarMenu';
 export const Navbar = ({ activeSection, onNavigate }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentSection, setCurrentSection] = useState(activeSection);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Obtener todas las secciones
+      const sections = navItems.map(item => ({
+        id: item.id,
+        element: document.getElementById(item.id)
+      })).filter(section => section.element !== null);
+
+      // Obtener la posición del scroll
+      const scrollPosition = window.scrollY + 100; // offset para el navbar
+      
+      // Detectar si estamos al final de la página
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+      
+      if (isAtBottom) {
+        setCurrentSection('contact');
+        return;
+      }
+
+      // Encontrar la sección actual basada en la posición
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section.element) {
+          const sectionTop = section.element.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            setCurrentSection(section.id);
+            break;
+          }
+        }
+      }
     };
+
+    // Ejecutar al montar
+    handleScroll();
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleNavClick = (sectionId: string) => {
     onNavigate(sectionId);
-    setIsMobileMenuOpen(false); // Cierra el menú al hacer clic
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -26,7 +60,7 @@ export const Navbar = ({ activeSection, onNavigate }: NavbarProps) => {
       <div className="w-full px-6 sm:px-10 lg:px-20">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <h1 className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Sergio
           </h1>
 
@@ -35,9 +69,9 @@ export const Navbar = ({ activeSection, onNavigate }: NavbarProps) => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => onNavigate(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className={`text-sm font-medium transition-colors cursor-pointer ${
-                  activeSection === item.id
+                  currentSection === item.id
                     ? 'text-cyan-400'
                     : 'text-slate-300 hover:text-cyan-400'
                 }`}
@@ -76,7 +110,7 @@ export const Navbar = ({ activeSection, onNavigate }: NavbarProps) => {
               key={item.id}
               onClick={() => handleNavClick(item.id)}
               className={`block w-full text-left py-3 px-4 rounded-lg transition-colors ${
-                activeSection === item.id
+                currentSection === item.id
                   ? 'text-cyan-400 bg-cyan-500/10'
                   : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50'
               }`}

@@ -1,26 +1,27 @@
+import { ArrowLeft, Tally1 } from 'lucide-react';
 import { experiencesList } from './experience';
 import './experience.css';
 
-export const Experience = () => {
+export const ExperienceComponent = () => {
   const chronologicalExperiences = experiencesList;
 
   const colors = [
-    { circle: 'bg-blue-400', border: 'border-blue-400', text: 'text-blue-400', line: 'bg-blue-400' },
-    { circle: 'bg-amber-400', border: 'border-amber-400', text: 'text-amber-400', line: 'bg-amber-400' },
     { circle: 'bg-emerald-400', border: 'border-emerald-400', text: 'text-emerald-400', line: 'bg-emerald-400' },
+    { circle: 'bg-amber-400', border: 'border-amber-400', text: 'text-amber-400', line: 'bg-amber-400' },
+    { circle: 'bg-blue-400', border: 'border-blue-400', text: 'text-blue-400', line: 'bg-blue-400' },
   ];
 
   return (
-    <section id="experiencia" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+    <section id="experience" className="py-30 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h3 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           MI CAMINO DESDE LA{' '}
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             INDUSTRIA
           </span>{' '}
           AL{' '}
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             DESARROLLO
           </span>
         </h3>
@@ -30,7 +31,18 @@ export const Experience = () => {
         <div className="hidden lg:block">
           <div className="relative w-full mx-auto px-4">
             {/* Main horizontal line */}
-            <div className="absolute top-12 left-8 right-8 h-1 bg-gradient-to-r from-emerald-400 via-amber-400 to-blue-400 opacity-50"></div>
+            <div className="absolute top-12 left-8 right-8 h-1 bg-linear-to-r from-emerald-400 via-amber-400 to-blue-400 opacity-50"></div>
+
+            {/* Left Arrow */}
+            <div className="absolute top-12.5 left-10.5 transform -translate-x-full -translate-y-1/2">
+              <ArrowLeft className='size-12 text-emerald-400 opacity-50' />
+               
+            </div>
+
+            {/* Right End Cap */}
+            <div className="absolute top-12.5 right-9.5 transform translate-x-full -translate-y-1/2">
+              <Tally1 className='size-12 text-blue-400/65' />
+            </div>
 
             {/* Timeline items */}
             <div className="grid grid-cols-3 gap-6 xl:gap-8">

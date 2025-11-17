@@ -5,6 +5,7 @@ export interface NavbarProps {
 
 export const navItems = [
   { id: 'home', label: 'Inicio' },
-  { id: 'proyectos', label: 'Proyectos' },
-  { id: 'contacto', label: 'Contacto' }
+  { id: 'experience', label: 'Experiencia' },
+  { id: 'proyects', label: 'Proyectos' },
+  { id: 'contact', label: 'Contacto' }
 ];

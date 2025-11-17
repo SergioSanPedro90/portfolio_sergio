@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from './assets/components/navbar/Navbar.component';
 import { Hero } from './assets/components/hero/Hero.component';
-import { Projects } from './assets/components/myProjects/projects.component';
-import { Footer } from './assets/components/footer/footer.component';
-import { Contact } from './assets/components/contact/contact.component';
-import { Experience } from './assets/components/experience/experience';
+import { Projects } from './assets/components/myProjects/Projects.component';
+import { Contact } from './assets/components/contact/Contact.component';
+import { Footer } from './assets/components/footer/Footer.component';
+import { ExperienceComponent } from './assets/components/experience/Experience.component';
 
 export const Home = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -18,7 +18,7 @@ export const Home = () => {
   // Detectar en qué sección estás mientras haces scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'proyectos', 'contacto']; // ← Solo 3 secciones
+      const sections = ['home', 'Experiencia', 'proyectos', 'contacto']; // ← Solo 3 secciones
       
       // Detectar si estamos cerca del final de la página
       const isNearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
@@ -50,7 +50,7 @@ export const Home = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
       <Navbar activeSection={activeSection} onNavigate={scrollToSection} />
       <Hero onNavigate={scrollToSection} />
-      <Experience/>
+      <ExperienceComponent/>
       <Projects />
       <Contact />
       <Footer />
