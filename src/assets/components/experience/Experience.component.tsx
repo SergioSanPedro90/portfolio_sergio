@@ -25,7 +25,6 @@ export const ExperienceComponent = () => {
             DESARROLLO
           </span>
         </h3>
-        <p className="text-slate-400 text-center mb-16">Mi evolución profesional</p>
 
         {/* Desktop - Horizontal Timeline */}
         <div className="hidden lg:block">
