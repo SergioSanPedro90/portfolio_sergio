@@ -15,7 +15,7 @@ export const ExperienceComponent = () => {
     <section id="experience" className="py-30 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h3 className="text-3xl md:text-4xl font-bold mb-20 text-center">
           MI CAMINO DESDE LA{' '}
           <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             INDUSTRIA
@@ -105,7 +105,7 @@ export const ExperienceComponent = () => {
             return (
               <div key={index} className="flex items-start gap-4">
                 {/* Year Circle */}
-                <div className={`flex-shrink-0 w-16 h-16 ${color.circle} rounded-full flex items-center justify-center shadow-xl border-4 border-slate-900`}>
+                <div className={`shrink-0 w-16 h-16 ${color.circle} rounded-full flex items-center justify-center shadow-xl border-4 border-slate-900`}>
                   <span className="text-lg font-bold text-slate-900">
                     {exp.year}
                   </span>
