@@ -61,7 +61,7 @@ export const Navbar = ({ activeSection, onNavigate }: NavbarProps) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <h1 className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Sergio
+            Sergio San Pedro Álvarez
           </h1>
 
           {/* Desktop Menu */}

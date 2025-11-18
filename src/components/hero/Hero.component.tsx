@@ -20,14 +20,9 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                 <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden mx-auto lg:mx-0">
                   <img
-                    src="/assets/img_curriculum.jpg"
+                    src="public/img_curriculum.jpg"
                     alt="Sergio"
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      console.log("Error cargando imagen");
-                      e.currentTarget.src =
-                        'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200"%3E%3Ccircle cx="100" cy="100" r="100" fill="url(%23grad)"%3E%3C/circle%3E%3Cdefs%3E%3ClinearGradient id="grad" x1="0%25" y1="0%25" x2="100%25" y2="100%25"%3E%3Cstop offset="0%25" style="stop-color:%2306b6d4;stop-opacity:1" /%3E%3Cstop offset="100%25" style="stop-color:%232563eb;stop-opacity:1" /%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x="50%25" y="50%25" font-size="80" fill="white" text-anchor="middle" dy=".3em" font-weight="bold"%3ES%3C/text%3E%3C/svg%3E';
-                    }}
                   />
                 </div>
               </div>
