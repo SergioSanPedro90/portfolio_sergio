@@ -60,7 +60,7 @@ export const Navbar = ({ activeSection, onNavigate }: NavbarProps) => {
       <div className="w-full px-6 sm:px-10 lg:px-20">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Sergio
           </h1>
 

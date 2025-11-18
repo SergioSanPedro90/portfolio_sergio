@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Navbar } from './assets/components/navbar/Navbar.component';
-import { Hero } from './assets/components/hero/Hero.component';
-import { Projects } from './assets/components/myProjects/Projects.component';
-import { Contact } from './assets/components/contact/Contact.component';
-import { Footer } from './assets/components/footer/Footer.component';
-import { ExperienceComponent } from './assets/components/experience/Experience.component';
+import { Navbar } from './components/navbar/Navbar.component';
+import { Hero } from './components/hero/Hero.component';
+import { Projects } from './components/myProjects/Projects.component';
+import { Contact } from './components/contact/Contact.component';
+import { Footer } from './components/footer/Footer.component';
+import { ExperienceComponent } from './components/experience/Experience.component';
 
 export const Home = () => {
   const [activeSection, setActiveSection] = useState('home');
