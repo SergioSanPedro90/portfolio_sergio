@@ -31,34 +31,21 @@ export const Projects = () => {
                 <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 to-purple-500/10"></div>
                 
                 {/* Project Screenshot in Laptop Mockup */}
-                <div className="relative h-full flex items-center justify-center p-6">
-                  <div className="relative w-full max-w-md">
+                <div className="relative h-full w-full flex items-center justify-center">
+                  <div className="relative w-full p-3">
                     {/* Laptop Frame */}
-                    <div className="relative bg-slate-800 rounded-lg p-1 shadow-2xl border-2 border-slate-700">
+                    <div className="relative bg-slate-800 rounded-lg p-1 shadow-2xl border-slate-700">
                       {/* Screen */}
-                      <div className="bg-slate-900 rounded-md overflow-hidden aspect-video">
+                      <div className="bg-slate-900 rounded-md overflow-hidden">
                         <img 
                           src={hoveredProject === index && project.imageHover ? project.imageHover : project.image}
                           alt={project.title}
-                          className="w-full h-full object-cover object-top transition-all duration-500"
-                          onError={(e) => {
-                            // Fallback si no existe la imagen
-                            e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect width="400" height="300" fill="%23334155"/%3E%3Ctext x="50%25" y="50%25" font-family="Arial" font-size="20" fill="%2394a3b8" text-anchor="middle" dominant-baseline="middle"%3EImagen en desarrollo%3C/text%3E%3C/svg%3E';
-                          }}
+                          className="w-full h-full object-cover transition-all duration-500"
                         />
                       </div>
-                      {/* Keyboard base */}
-                      <div className="h-2 bg-slate-700 rounded-b-lg mt-1"></div>
                     </div>
                   </div>
                 </div>
-
-                {/* Hover indicator */}
-                {project.imageHover && (
-                  <div className="absolute top-4 right-4 bg-cyan-500/20 backdrop-blur-sm border border-cyan-500/50 text-cyan-400 text-xs px-3 py-1 rounded-full">
-                    Hover para ver demo
-                  </div>
-                )}
               </div>
 
               {/* Content */}

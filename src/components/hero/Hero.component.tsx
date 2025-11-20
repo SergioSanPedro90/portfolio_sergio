@@ -20,7 +20,7 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                 <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden mx-auto lg:mx-0">
                   <img
-                    src="public/img_curriculum.jpg"
+                    src="public/images/img_curriculum.jpg"
                     alt="Sergio"
                     className="w-full h-full object-cover"
                   />
@@ -47,13 +47,14 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/sergio-san-pedro-alvarez/"
+                target="_blank"
                 className="p-3 bg-slate-800/50 hover:bg-cyan-500/20 border border-slate-700 hover:border-cyan-500 rounded-lg transition-all transform hover:scale-110"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:tu@email.com"
+                href="mailto:sergiospalvarez@hotmail.com"
                 className="p-3 bg-slate-800/50 hover:bg-cyan-500/20 border border-slate-700 hover:border-cyan-500 rounded-lg transition-all transform hover:scale-110"
               >
                 <Mail className="w-5 h-5" />
@@ -74,7 +75,7 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                   12 años como matricero ajustador
                 </span>{" "}
                 en la industria metalúrgica, hice la transición al desarrollo de
-                software en 2024 tras completar el bootcamp de{" "}
+                software en 2025 tras completar el bootcamp de{" "}
                 <span className="text-cyan-400">4Geeks Academy</span>.
               </p>
 
@@ -90,7 +91,7 @@ export const Hero = ({ onNavigate }: HeroProps) => {
               <p>
                 Me especializo en crear soluciones full-stack con{" "}
                 <span className="text-cyan-400 font-semibold">
-                  React, TypeScript y Python
+                  React, TypeScript, Python, JavaScript
                 </span>
                 , con enfoque en diseño responsive y automatización de procesos.
               </p>
@@ -99,14 +100,14 @@ export const Hero = ({ onNavigate }: HeroProps) => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <button
-                onClick={() => onNavigate("proyectos")}
-                className="flex-1 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
+                onClick={() => onNavigate("proyects")}
+                className="cursor-pointer flex-1 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
               >
                 Ver Proyectos
               </button>
               <button
-                onClick={() => onNavigate("contacto")}
-                className="flex-1 px-6 py-3 border-2 border-cyan-500 hover:bg-cyan-500/10 rounded-lg font-semibold transition-all"
+                onClick={() => onNavigate("contact")}
+                className="cursor-pointer flex-1 px-6 py-3 border-2 border-cyan-500 hover:bg-cyan-500/10 rounded-lg font-semibold transition-all"
               >
                 Contactar
               </button>
