@@ -16,14 +16,10 @@ export const ExperienceComponent = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h3 className="text-3xl md:text-4xl font-bold mb-20 text-center">
-          MI CAMINO DESDE LA{' '}
+          MI EXPERIENCIA{' '}
           <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            INDUSTRIA
+            REAL
           </span>{' '}
-          AL{' '}
-          <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            DESARROLLO
-          </span>
         </h3>
 
         {/* Desktop - Horizontal Timeline */}
@@ -35,7 +31,6 @@ export const ExperienceComponent = () => {
             {/* Left Arrow */}
             <div className="absolute top-12.5 left-10.5 transform -translate-x-full -translate-y-1/2">
               <ArrowLeft className='size-12 text-emerald-400 opacity-50' />
-               
             </div>
 
             {/* Right End Cap */}

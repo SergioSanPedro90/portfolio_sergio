@@ -12,7 +12,7 @@ export const Contact = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a 
-            href="mailto:tu@email.com"
+            href="mailto:sergiospalvarez@hotmail.com"
             className="w-full sm:w-auto px-8 py-4 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center shadow-lg"
           >
             <Mail className="w-5 h-5 mr-2" />

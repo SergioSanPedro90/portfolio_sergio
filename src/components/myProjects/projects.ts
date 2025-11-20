@@ -2,47 +2,57 @@ interface Project {
   title: string;
   description: string;
   tech: string[];
-  image: string;        // Imagen estática (mockup)
-  imageHover?: string;  // GIF animado (opcional)
-  demoLink: string;     // Link del proyecto en producción
-  githubLink: string;   // Link del código en GitHub
+  image: string; // Imagen estática (mockup)
+  imageHover?: string; // GIF animado (opcional)
+  demoLink: string; // Link del proyecto en producción
+  githubLink: string; // Link del código en GitHub
 }
 
 export const projects: Project[] = [
-    {
-      title: 'Sistema de Gestión de Contactos',
-      description: 'Aplicación full-stack con CRUD completo, autenticación JWT y arquitectura de componentes escalable.',
-      tech: ['React', 'TypeScript', 'Flask', 'SQLAlchemy'],
-      image: '/projects/contactos-static.png',      // ← Pon tu captura aquí
-      imageHover: '/projects/contactos-demo.gif',   // ← Pon tu GIF aquí
-      demoLink: 'https://tu-proyecto.vercel.app',
-      githubLink: 'https://github.com/SergioSanPedro90/contactos'
-    },
-    {
-      title: 'Automatización WhatsApp/Email',
-      description: 'Sistema de recordatorios automatizados para Calendly usando Twilio y notificaciones por email.',
-      tech: ['React', 'Flask', 'Twilio API', 'PostgreSQL'],
-      image: '/projects/whatsapp-static.png',
-      imageHover: '/projects/whatsapp-demo.gif',
-      demoLink: 'https://tu-proyecto.vercel.app',
-      githubLink: 'https://github.com/SergioSanPedro90/whatsapp-automation'
-    },
-    {
-      title: 'Landing Pages Inmobiliarias',
-      description: 'Diseños responsive con efectos hover optimizados para móvil y desktop.',
-      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-      image: '/projects/inmobiliaria-static.png',
-      imageHover: '/projects/inmobiliaria-demo.gif',
-      demoLink: 'https://tu-proyecto.vercel.app',
-      githubLink: 'https://github.com/SergioSanPedro90/landing-inmobiliaria'
-    },
-    {
-      title: 'Sistema de Biblioteca',
-      description: 'Gestión completa de libros con backend Flask y autenticación de usuarios.',
-      tech: ['React', 'Flask', 'SQLAlchemy', 'JWT'],
-      image: '/projects/biblioteca-static.png',
-      imageHover: '/projects/biblioteca-demo.gif',
-      demoLink: 'https://tu-proyecto.vercel.app',
-      githubLink: 'https://github.com/SergioSanPedro90/biblioteca'
-    }
-  ];
+  {
+    title: "Brand Genius S.A.C",
+    description:
+      "Landing page corporativa con sistema de automatización completo y SEO básico. Los formularios se integran con Google Sheets para generar reportes automáticos en Excel, y los usuarios son dirigidos a Calendly para agendar citas. Solución end-to-end que optimiza el proceso de captación de leads.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Sheets API",
+      "Calendly", "Git", "GitHub"
+    ],
+    image: "public/images/Captura de pantalla 2025-11-20 092835.png",
+    imageHover: "public/images/Captura de pantalla 2025-11-20 093157.png",
+    demoLink: "",
+    githubLink: "https://github.com/tu-usuario/brand-genius", // si aplica
+  },
+  {
+    title: "Proyecto Bootcamp",
+    description:
+      "Aplicación web full-stack enfocada al universo de Dragones y Mazmorras desarrollada en equipo de 4 personas. Sistema de autenticación completo con registro tradicional y Google OAuth, envío automático de emails de bienvenida con SendGrid, y base de datos relacional. Proyecto que integra frontend y backend con gestión de estado y API REST.",
+    tech: ["React", "Flask", "JavaScript", "Python", "Google OAuth", "SendGrid", "SQLAlchemy", "PostgreSQL", "API`s", "JWT", "Git", "GitHub"],
+    image: "public/images/proyectoBootcamp/Captura de pantalla 2025-11-19 201131.png",
+    imageHover: "public/images/proyectoBootcamp/Captura de pantalla 2025-11-20 101018.png",
+    demoLink: "https://sample-service-name-mv9q.onrender.com/",
+    githubLink: "https://github.com/SergioSanPedro90/SergioSanPedro-ProyectoFinal",
+  },
+  {
+    title: "Landing Page Magic The Gathering",
+    description:
+      "Galería visual de cartas de Magic: The Gathering más buscadas. Cada carta enlaza directamente a tiendas online para facilitar la compra. Proyecto personal que combina mi pasión por Magic con desarrollo web.",
+    tech: ["React", "JavasScript", "Bootstrap", "Netlify", "Git", "GitHub"],
+    image: "public/images/landingMTG/Captura de pantalla 2025-11-20 094031.png",
+    imageHover: "public/images/landingMTG/Captura de pantalla 2025-11-20 094056.png",
+    demoLink: "https://top-magics-cards.netlify.app/",
+    githubLink: "https://github.com/SergioSanPedro90/SergioSanPedro-LandingPage-Magic",
+  },
+  {
+    title: "Sistema de Biblioteca",
+    description:
+      "Gestión completa de libros con backend Flask y autenticación de usuarios.",
+    tech: ["React", "Flask", "SQLAlchemy", "JWT"],
+    image: "/projects/biblioteca-static.png",
+    imageHover: "/projects/biblioteca-demo.gif",
+    demoLink: "https://tu-proyecto.vercel.app",
+    githubLink: "https://github.com/SergioSanPedro90/biblioteca",
+  },
+];
