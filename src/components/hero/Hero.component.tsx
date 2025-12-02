@@ -20,7 +20,7 @@ export const Hero = ({ onNavigate }: HeroProps) => {
                 <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden mx-auto lg:mx-0">
                   <img
-                    src="public/images/img_curriculum.jpg"
+                    src="/images/img_curriculum.jpg"
                     alt="Sergio"
                     className="w-full h-full object-cover"
                   />
