@@ -10,10 +10,10 @@ export const Hero = ({ onNavigate }: HeroProps) => {
       id="home"
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
     >
-      <div className="max-w-6xl mx-auto w-full pt-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto w-full pt-16">
+        <div className="grid lg:grid-cols-2 items-center">
           {/* Left side - Image and Name */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left mt-7">
             {/* Profile Image */}
             <div className="mb-8 inline-block">
               <div className="relative">
