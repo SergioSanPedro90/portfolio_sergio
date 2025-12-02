@@ -20,8 +20,8 @@ export const projects: Project[] = [
       "Google Sheets API",
       "Calendly", "Git", "GitHub"
     ],
-    image: "public/images/Captura de pantalla 2025-11-20 092835.png",
-    imageHover: "public/images/Captura de pantalla 2025-11-20 093157.png",
+    image: "/images/Captura de pantalla 2025-11-20 092835.png",
+    imageHover: "/images/Captura de pantalla 2025-11-20 093157.png",
     demoLink: "",
     githubLink: "https://github.com/tu-usuario/brand-genius", // si aplica
   },
@@ -30,8 +30,8 @@ export const projects: Project[] = [
     description:
       "Aplicación web full-stack enfocada al universo de Dragones y Mazmorras desarrollada en equipo de 4 personas. Sistema de autenticación completo con registro tradicional y Google OAuth, envío automático de emails de bienvenida con SendGrid, y base de datos relacional. Proyecto que integra frontend y backend con gestión de estado y API REST.",
     tech: ["React", "Flask", "JavaScript", "Python", "Google OAuth", "SendGrid", "SQLAlchemy", "PostgreSQL", "API`s", "JWT", "Git", "GitHub"],
-    image: "public/images/proyectoBootcamp/Captura de pantalla 2025-11-19 201131.png",
-    imageHover: "public/images/proyectoBootcamp/Captura de pantalla 2025-11-20 101018.png",
+    image: "/images/proyectoBootcamp/Captura de pantalla 2025-11-19 201131.png",
+    imageHover: "/images/proyectoBootcamp/Captura de pantalla 2025-11-20 101018.png",
     demoLink: "https://sample-service-name-mv9q.onrender.com/",
     githubLink: "https://github.com/SergioSanPedro90/SergioSanPedro-ProyectoFinal",
   },
@@ -40,19 +40,19 @@ export const projects: Project[] = [
     description:
       "Galería visual de cartas de Magic: The Gathering más buscadas. Cada carta enlaza directamente a tiendas online para facilitar la compra. Proyecto personal que combina mi pasión por Magic con desarrollo web.",
     tech: ["React", "JavasScript", "Bootstrap", "Netlify", "Git", "GitHub"],
-    image: "public/images/landingMTG/Captura de pantalla 2025-11-20 094031.png",
-    imageHover: "public/images/landingMTG/Captura de pantalla 2025-11-20 094056.png",
+    image: "/images/landingMTG/Captura de pantalla 2025-11-20 094031.png",
+    imageHover: "/images/landingMTG/Captura de pantalla 2025-11-20 094056.png",
     demoLink: "https://top-magics-cards.netlify.app/",
     githubLink: "https://github.com/SergioSanPedro90/SergioSanPedro-LandingPage-Magic",
   },
   {
-    title: "Sistema de Biblioteca",
+    title: "Blog de Naruto",
     description:
-      "Gestión completa de libros con backend Flask y autenticación de usuarios.",
-    tech: ["React", "Flask", "SQLAlchemy", "JWT"],
-    image: "/projects/biblioteca-static.png",
-    imageHover: "/projects/biblioteca-demo.gif",
-    demoLink: "https://tu-proyecto.vercel.app",
-    githubLink: "https://github.com/SergioSanPedro90/biblioteca",
+      "Blog interactivo con integración de la API oficial de Naruto. Sistema de favoritos con persistencia en LocalStorage. Context API para estado global y diseño temático responsive del anime.",
+    tech: ["React", "JavaScript", "Naruto API", "LocalStorage", "React Router", "Netlify", "Git", "GitHub"],
+    image: "/images/blogNaruto/Captura de pantalla 2025-12-02 143012.png",
+    imageHover: "/images/blogNaruto/Captura de pantalla 2025-12-02 143046.png",
+    demoLink: "https://naruto-blog.netlify.app/",
+    githubLink: "https://github.com/SergioSanPedro90/SergioSanPedro-BlogNaruto",
   },
 ];
