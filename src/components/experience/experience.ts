@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Code2, type LucideIcon } from 'lucide-react';
+import { GraduationCap, Code2, type LucideIcon } from 'lucide-react';
 
 export interface Experience {
   year: string;
