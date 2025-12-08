@@ -26,7 +26,7 @@ export const Projects = () => {
               onMouseLeave={() => setHoveredProject(null)}
             >
               {/* Imagenes */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-auto overflow-hidden">
                 <div className="absolute inset-0 bg-linear-to-br"></div>
 
                 {/* Projectos */}
@@ -52,7 +52,7 @@ export const Projects = () => {
               </div>
 
               {/* Contenido */}
-              <div className="p-6 md:p-8">
+              <div className="p-6 lg:p-8">
                 <h4 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">
                   {project.title}
                 </h4>
