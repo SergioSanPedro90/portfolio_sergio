@@ -1,4 +1,4 @@
-import { ArrowLeft, Tally1 } from 'lucide-react';
+import { ArrowRight, Tally1 } from 'lucide-react';
 import { experiencesList } from './experience';
 import './experience.css';
 
@@ -28,14 +28,14 @@ export const ExperienceComponent = () => {
             {/* Main horizontal line */}
             <div className="absolute top-12 left-8 right-8 h-1 bg-linear-to-r from-emerald-400 via-amber-400 to-blue-400 opacity-50"></div>
 
-            {/* Left Arrow */}
-            <div className="absolute top-12.5 left-10.5 transform -translate-x-full -translate-y-1/2">
-              <ArrowLeft className='size-12 text-emerald-400 opacity-50' />
+            {/* Arrow */}
+            <div className="absolute top-12.5 right-10 transform translate-x-full -translate-y-1/2">
+              <ArrowRight className='size-10 text-blue-400/65' />
             </div>
 
-            {/* Right End Cap */}
-            <div className="absolute top-12.5 right-9.5 transform translate-x-full -translate-y-1/2">
-              <Tally1 className='size-12 text-blue-400/65' />
+            {/* End Cap */}
+            <div className="absolute top-12.5 left-18 transform -translate-x-full -translate-y-1/2">
+              <Tally1 className='size-12 text-emerald-400 opacity-50' />
             </div>
 
             {/* Timeline items */}
@@ -48,7 +48,7 @@ export const ExperienceComponent = () => {
                     {/* Year Circle on the line */}
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
                       <div className={`w-24 h-24 ${color.circle} rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-slate-900 relative z-10`}>
-                        <span className="text-2xl font-bold text-slate-900">
+                        <span className="text-xl font-bold text-slate-900">
                           {exp.year}
                         </span>
                       </div>

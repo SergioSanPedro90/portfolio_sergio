@@ -2,10 +2,11 @@ interface Project {
   title: string;
   description: string;
   tech: string[];
-  image: string; // Imagen estática (mockup)
-  imageHover?: string; // GIF animado (opcional)
-  demoLink: string; // Link del proyecto en producción
-  githubLink: string; // Link del código en GitHub
+  image: string; 
+  imageHover?: string; 
+  demoLink: string; 
+  githubLink: string;
+  isConfidential?: boolean; 
 }
 
 export const projects: Project[] = [
@@ -23,7 +24,8 @@ export const projects: Project[] = [
     image: "/images/Captura de pantalla 2025-11-20 092835.png",
     imageHover: "/images/Captura de pantalla 2025-11-20 093157.png",
     demoLink: "",
-    githubLink: "https://github.com/tu-usuario/brand-genius", // si aplica
+    githubLink: "https://github.com/tu-usuario/brand-genius",
+    isConfidential: true,
   },
   {
     title: "Proyecto Bootcamp",
@@ -38,7 +40,7 @@ export const projects: Project[] = [
   {
     title: "Landing Page Magic The Gathering",
     description:
-      "Galería visual de cartas de Magic: The Gathering más buscadas. Cada carta enlaza directamente a tiendas online para facilitar la compra. Proyecto personal que combina mi pasión por Magic con desarrollo web.",
+      "Galería visual de cartas de Magic: The Gathering más buscadas. Cada carta enlaza directamente a la tienda online para facilitar la compra. Proyecto personal que combina mi pasión por Magic con desarrollo web.",
     tech: ["React", "JavasScript", "Bootstrap", "Netlify", "Git", "GitHub"],
     image: "/images/landingMTG/Captura de pantalla 2025-11-20 094031.png",
     imageHover: "/images/landingMTG/Captura de pantalla 2025-11-20 094056.png",
