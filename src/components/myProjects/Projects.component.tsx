@@ -17,7 +17,7 @@ export const Projects = () => {
           producción
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8 p-5">
           {projects.map((project, index) => (
             <div
               key={index}
