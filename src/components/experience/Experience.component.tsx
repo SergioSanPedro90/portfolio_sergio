@@ -101,7 +101,7 @@ export const ExperienceComponent = () => {
               <div key={index} className="flex items-start gap-4">
                 {/* Year Circle */}
                 <div className={`shrink-0 w-16 h-16 ${color.circle} rounded-full flex items-center justify-center shadow-xl border-4 border-slate-900`}>
-                  <span className="text-lg font-bold text-slate-900">
+                  <span className="text-xs font-bold text-slate-900">
                     {exp.year}
                   </span>
                 </div>
