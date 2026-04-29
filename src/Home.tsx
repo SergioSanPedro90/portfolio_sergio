@@ -1,13 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Navbar } from './components/navbar/Navbar.component';
 import { Hero } from './components/hero/Hero.component';
 import { Projects } from './components/myProjects/Projects.component';
 import { Contact } from './components/contact/Contact.component';
 import { Footer } from './components/footer/Footer.component';
 import { ExperienceComponent } from './components/experience/Experience.component';
+import { IntroScreen } from './components/intro/IntroScreen.component';
+import { ParticleBackground } from './components/particles/ParticleBackground.component';
 
 export const Home = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [showIntro, setShowIntro] = useState(true);
+
+  const handleIntroComplete = useCallback(() => {
+    setShowIntro(false);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -15,20 +22,18 @@ export const Home = () => {
     setActiveSection(sectionId);
   };
 
-  // Detectar en qué sección estás mientras haces scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'Experiencia', 'proyectos', 'contacto']; // ← Solo 3 secciones
-      
-      // Detectar si estamos cerca del final de la página
-      const isNearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
-      
+      const sections = ['home', 'Experiencia', 'proyectos', 'contacto'];
+
+      const isNearBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+
       if (isNearBottom) {
         setActiveSection('contacto');
         return;
       }
-      
-      // Encuentra qué sección está visible en pantalla
+
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -47,13 +52,25 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
-      <Navbar activeSection={activeSection} onNavigate={scrollToSection} />
-      <Hero onNavigate={scrollToSection} />
-      <ExperienceComponent/>
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      {/* Intro - se muestra solo la primera vez */}
+      {showIntro && <IntroScreen onComplete={handleIntroComplete} />}
+
+      {/* Fondo de partículas - siempre presente */}
+      <ParticleBackground />
+
+      {/* Contenido principal */}
+      <div
+        className="min-h-screen text-slate-800 relative"
+        style={{ zIndex: 1 }}
+      >
+        <Navbar activeSection={activeSection} onNavigate={scrollToSection} />
+        <Hero onNavigate={scrollToSection} />
+        <ExperienceComponent />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 };
