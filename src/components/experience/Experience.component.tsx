@@ -3,7 +3,7 @@ import { experiencesList } from './experience';
 
 export const ExperienceComponent = () => {
   return (
-    <section id="experience" className="py-18 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h3 className="text-3xl md:text-4xl font-bold mb-16 text-center">
