@@ -2,7 +2,7 @@ import { Mail, Github, Linkedin, MapPin } from 'lucide-react';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-8 px-4 sm:px-6 lg:px-8 scroll-mt-20">
+    <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           ¿Trabajamos <span className="text-cyan-400">Juntos?</span>
