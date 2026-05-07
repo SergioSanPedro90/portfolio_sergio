@@ -75,7 +75,7 @@ export const Projects = () => {
                 <div className="flex gap-4">
                   <button
                     onClick={() => window.open(project.demoLink, "_blank")}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-all font-medium text-sm cursor-pointer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:border-cyan-500 rounded-lg text-xs transition-all cursor-pointer"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Ver proyecto

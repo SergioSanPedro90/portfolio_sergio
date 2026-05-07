@@ -21,7 +21,7 @@ export const experiencesList: Experience[] = [
     role: 'Web Developer',
     icon: Briefcase,
     description: 'Desarrollo de landing page corporativa con sistema de automatización completo. Integración de formularios con Google Sheets para generación automática de reportes y sistema de agendamiento con Calendly.',
-    skills: ['React', 'Tailwind CSS', 'Google Sheets', 'Calendly'],
+    skills: ['React', 'Tailwind CSS', 'Google Sheets', 'Calendly', 'TypeScript', 'Responsive'],
     link: 'https://www.brandgeniuscompany.com/',
   },
   {
@@ -32,7 +32,7 @@ export const experiencesList: Experience[] = [
     role: 'Frontend Developer',
     icon: Briefcase,
     description: 'Desarrollo de landing page corporativa para empresa del sector energético solar. Diseño responsive y optimizado con soporte multiidioma (español e inglés).',
-    skills: ['React', 'Tailwind CSS', 'Responsive', 'i18n'],
+    skills: ['React', 'Tailwind CSS', 'Responsive', 'JavaScript', 'Responsive'],
     link: 'https://www.vyntraenergy.com',
   },
   {
@@ -43,7 +43,7 @@ export const experiencesList: Experience[] = [
     role: 'Frontend Developer',
     icon: Briefcase,
     description: 'Desarrollo de aplicación web multilenguaje para plataforma de aprendizaje de idiomas. Implementación de sistema de internacionalización (i18n) con soporte para español, inglés y japonés.',
-    skills: ['Next.js', 'TypeScript', 'i18n'],
+    skills: ['Next.js', 'TypeScript', 'i18n', 'Responsive'],
     link: 'https://www.leafyandspark.com/es',
   },
 ];
