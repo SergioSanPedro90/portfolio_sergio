@@ -1,5 +1,5 @@
-import { ExternalLink } from 'lucide-react';
-import { experiencesList } from './experience';
+import { ExternalLink } from "lucide-react";
+import { experiencesList } from "./experience";
 
 export const ExperienceComponent = () => {
   return (
@@ -7,7 +7,7 @@ export const ExperienceComponent = () => {
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h3 className="text-3xl md:text-4xl font-bold mb-16 text-center">
-          Experiencia{' '}
+          Experiencia{" "}
           <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Real
           </span>
@@ -29,7 +29,9 @@ export const ExperienceComponent = () => {
                   {/* Header */}
                   <div className="flex items-start justify-between gap-4 mb-3">
                     <div>
-                      <span className="text-xs text-cyan-400 tracking-wider">{exp.period}</span>
+                      <span className="text-xs text-cyan-400 tracking-wider">
+                        {exp.period}
+                      </span>
                       <h4 className="text-xl font-bold text-white">
                         {exp.title}
                       </h4>
@@ -40,17 +42,7 @@ export const ExperienceComponent = () => {
                         {exp.company}
                       </p>
                     </div>
-                    {exp.link && (
-                      <a
-                        href={exp.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="shrink-0 p-2 text-slate-400 hover:text-cyan-400 transition-colors"
-                        title="Ver proyecto"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
+                   
                   </div>
 
                   {/* Description */}
@@ -69,6 +61,19 @@ export const ExperienceComponent = () => {
                       </span>
                     ))}
                   </div>
+
+                  {/* link a proyecto */}
+                  {exp.link && (
+                    <a
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:border-cyan-500 rounded-lg text-xs transition-all"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      Ver proyecto
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
