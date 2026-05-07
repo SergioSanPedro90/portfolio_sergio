@@ -1,2 +1,13 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap');
+
+body {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+  min-height: 100vh;
+  font-family: 'DM Mono', monospace; /* base de todo */
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
