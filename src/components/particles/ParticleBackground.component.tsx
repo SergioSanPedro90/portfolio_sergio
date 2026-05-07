@@ -14,7 +14,7 @@ export const ParticleBackground = () => {
     const COUNT = 85;
     const MAX_DIST = 140;
     // Azul que encaja con cyan/blue del portfolio pero sobre fondo claro
-    const NODE_COLOR = '42, 82, 190';
+    const NODE_COLOR = '148, 163, 184'
 
     interface Node {
       x: number; y: number;

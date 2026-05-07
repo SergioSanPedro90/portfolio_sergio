@@ -1,43 +1,49 @@
-import { GraduationCap, Code2, type LucideIcon } from 'lucide-react';
+import { Briefcase, type LucideIcon } from 'lucide-react';
 
 export interface Experience {
   year: string;
-  subtitle: string;
+  period: string;
   title: string;
   company: string;
+  role: string;
   icon: LucideIcon;
   description: string;
   skills: string[];
+  link?: string;
 }
 
 export const experiencesList: Experience[] = [
-  
-  {
-    year: '04/2025',
-    subtitle: '6 meses',
-    title: '4Geeks Academy',
-    company: 'Bootcamp Full-Stack',
-    icon: GraduationCap,
-    description: 'Formación intensiva en desarrollo web full-stack. Proyectos: sistema de gestión de contactos, biblioteca con JWT, aplicación colaborativa, integración de APIs externas.',
-    skills: ['React', 'JavaScript', 'Python', 'Flask', 'SQLAlchemy', 'Git', 'GitHub']
-  },
-  {
-    year: '11/2025',
-    subtitle: 'Proyecto para empresa',
-    title: 'Brand Genius S.A.C',
-    company: 'Web Developer',
-    icon: Code2,
-    description: 'Desarrollo de landing page corporativa con sistema de automatización completo. Integración de formularios con Google Sheets para generación automática de reportes y sistema de agendamiento con Calendly.',
-    skills: ['React', 'TypeScript', 'Tailwind CSS', 'Google Sheets API', 'Calendly', 'Automatización']
-  },
   {
     year: '2025',
-    subtitle: 'Presente',
-    title: 'Freelance',
-    company: 'Full Stack Developer',
-    icon: Code2,
-    description: 'Desarrollo de aplicaciones web full-stack con React, TypeScript y Python. Especializado en landing pages responsivas, sistemas de automatización con APIs y soluciones personalizadas.',
-    skills: ['React', 'TypeScript', 'Python', 'Flask', 'Tailwind CSS', 'REST APIs']
+    period: 'Dic 2025 — Ene 2026',
+    title: 'Brand Genius',
+    company: 'Agencia de Marketing Digital',
+    role: 'Web Developer',
+    icon: Briefcase,
+    description: 'Desarrollo de landing page corporativa con sistema de automatización completo. Integración de formularios con Google Sheets para generación automática de reportes y sistema de agendamiento con Calendly.',
+    skills: ['React', 'Tailwind CSS', 'Google Sheets', 'Calendly'],
+    link: 'https://www.brandgeniuscompany.com/',
   },
-  
+  {
+    year: '2026',
+    period: '2026',
+    title: 'Vyntra Energy',
+    company: 'Empresa de energía solar P2P',
+    role: 'Frontend Developer',
+    icon: Briefcase,
+    description: 'Desarrollo de landing page corporativa para empresa del sector energético solar. Diseño responsive y optimizado con soporte multiidioma (español e inglés).',
+    skills: ['React', 'Tailwind CSS', 'Responsive', 'i18n'],
+    link: 'https://www.vyntraenergy.com',
+  },
+  {
+    year: '2026',
+    period: '2026',
+    title: 'FluentMinds',
+    company: 'Plataforma de aprendizaje de idiomas',
+    role: 'Frontend Developer',
+    icon: Briefcase,
+    description: 'Desarrollo de aplicación web multilenguaje para plataforma de aprendizaje de idiomas. Implementación de sistema de internacionalización (i18n) con soporte para español, inglés y japonés.',
+    skills: ['Next.js', 'TypeScript', 'i18n'],
+    link: 'https://www.leafyandspark.com/es',
+  },
 ];

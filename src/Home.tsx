@@ -61,7 +61,7 @@ export const Home = () => {
 
       {/* Contenido principal */}
       <div
-        className="min-h-screen text-slate-800 relative"
+        className="min-h-screen text-slate-100 relative"
         style={{ zIndex: 1 }}
       >
         <Navbar activeSection={activeSection} onNavigate={scrollToSection} />

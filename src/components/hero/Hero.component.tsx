@@ -11,14 +11,15 @@ export const Hero = ({ onNavigate }: HeroProps) => {
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto w-full pt-16">
-        <div className="grid lg:grid-cols-2 items-center">
-          {/* Left side - Image and Name */}
-          <div className="text-center lg:text-left mt-7">
+        <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-16">
+
+          {/* izquierda -- imagen y nombre */}
+          <div className="flex flex-col items-center mt-7">
             {/* Profile Image */}
             <div className="mb-8 inline-block">
               <div className="relative">
                 <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
-                <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden mx-auto lg:mx-0">
+                <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden mx-auto">
                   <img
                     src="/images/img_curriculum.jpg"
                     alt="Sergio"
@@ -28,16 +29,16 @@ export const Hero = ({ onNavigate }: HeroProps) => {
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold pb-5 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Sergio
-            </h1>
+            <h1 className="text-5xl md:text-6xl font-bold pb-5 bg-linear-to-r from-cyan-400 to-blue-500  bg-clip-text text-transparent text-center">
+  Sergio
+</h1>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-slate-300 mb-6">
-              Full Stack Developer
-            </h2>
+           <h2 className="text-2xl md:text-3xl font-semibold text-slate-300 mb-6 text-center">
+  Full Stack Developer
+</h2>
 
-            {/* Social Links */}
-            <div className="flex justify-center lg:justify-start space-x-4 mb-8">
+            {/* links */}
+            <div className="flex justify-center space-x-4 mb-8">
               <a
                 href="https://github.com/SergioSanPedro90"
                 target="_blank"
@@ -62,7 +63,7 @@ export const Hero = ({ onNavigate }: HeroProps) => {
             </div>
           </div>
 
-          {/* Right side - About text */}
+          {/* derecha --  sobre mi */}
           <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 shadow-xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-400">
               Sobre mí
@@ -97,7 +98,7 @@ export const Hero = ({ onNavigate }: HeroProps) => {
               </p>
             </div>
 
-            {/* Action Buttons */}
+            {/* botones */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <button
                 onClick={() => onNavigate("proyects")}
