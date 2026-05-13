@@ -1,14 +1,33 @@
-interface Project {
+export interface Project {
   title: string;
   description: string;
   tech: string[];
   image: string;
-  imageHover?: string;
-  demoLink: string;
+  imageHover: string;
+  image2?: string;
+  imageHover2?: string;
+  demoLink?: string;
   githubLink: string;
+  isMobile?: boolean;
+  isApk?: boolean;
+  apkLink?: string;
 }
 
 export const projects: Project[] = [
+  {
+    title: "Surf para Dummies",
+    description:
+      "App móvil de previsión de surf para el Cantábrico. Previsiones reales para 20 spots ordenados por ubicación, webcams en directo, navegación a Google Maps y autenticación. Pensada para surfistas que no quieren descifrar Windguru.",
+    tech: ["React Native", "TypeScript", "Expo", "Supabase", "Open-Meteo API", "Geolocation"],
+    image: "/images/appSurfDummies/home_surf_dummies.jpg",
+    imageHover: "/images/appSurfDummies/detalles_playa_surf_dummies.jpg",
+    image2: '/images/appSurfDummies/registro_surf_dummies.jpg',
+    imageHover2: '/images/appSurfDummies/perfil_surf_dummies.jpg',
+    apkLink: "https://expo.dev/accounts/sergiosanpedro/projects/surf-para-dummies/builds/67e2d0d1-719e-4834-9741-831eb8be917b",
+    githubLink: "https://github.com/SergioSanPedro90/app-surf-para-dummies",
+    isMobile: true,
+    isApk: true
+  },
   {
     title: "Proyecto Bootcamp",
     description:
