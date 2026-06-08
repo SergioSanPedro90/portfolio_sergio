@@ -23,7 +23,7 @@ export const projects: Project[] = [
     imageHover: "/images/appSurfDummies/detalles_playa_surf_dummies.jpg",
     image2: '/images/appSurfDummies/registro_surf_dummies.jpg',
     imageHover2: '/images/appSurfDummies/perfil_surf_dummies.jpg',
-    apkLink: "https://expo.dev/accounts/sergiosanpedro/projects/surf-para-dummies/builds/67e2d0d1-719e-4834-9741-831eb8be917b",
+    apkLink: "https://github.com/SergioSanPedro90/app-surf-para-dummies/releases/download/v0.2.0/application-81082b78-553a-4e5f-b09a-24a91747303d.apk",
     githubLink: "https://github.com/SergioSanPedro90/app-surf-para-dummies",
     isMobile: true,
     isApk: true
