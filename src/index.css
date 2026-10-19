@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap');
+@import "tailwindcss";
 
 body {
   background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
