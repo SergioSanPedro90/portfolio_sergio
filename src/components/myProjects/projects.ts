@@ -2,18 +2,63 @@ export interface Project {
   title: string;
   description: string;
   tech: string[];
-  image: string;
-  imageHover: string;
+  image?: string;
+  imageHover?: string;
   image2?: string;
   imageHover2?: string;
   demoLink?: string;
-  githubLink: string;
+  // Texto del botón de demoLink (por defecto "Ver proyecto")
+  linkLabel?: string;
+  githubLink?: string;
   isMobile?: boolean;
   isApk?: boolean;
   apkLink?: string;
+  highlights?: string[];
+  featured?: boolean;
+  // Sustituye los botones de enlace (p. ej. proyectos de cliente con repos privados)
+  clientLabel?: string;
+  playStoreLink?: string;
+  playStoreComingSoon?: boolean;
+  // Sin capturas públicas: se muestra PrivatePreview en lugar de imágenes
+  isPrivate?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    title: "GurePintxo",
+    description:
+      "App móvil para descubrir los bares de pintxos de Euskadi, guardar favoritos y montar rutas. Usa el dataset oficial del Gobierno Vasco (bares del club Euskadi Gastronomika) y la comunidad puede sugerir bares nuevos.",
+    highlights: [
+      "App React Native + Expo (TypeScript, Expo Router, NativeWind), en 3 idiomas (es/eu/en)",
+      "Mapa con bares cercanos, reseñas con fotos (Cloudinary), favoritos y rutas que se abren en Google Maps",
+      "Backend Spring Boot + MySQL con JWT, desplegado en Railway con Docker; emails con Brevo",
+      "Web de presentación en Next.js en 3 idiomas (gurepintxo.com)",
+    ],
+    tech: ["React Native", "Expo", "TypeScript", "NativeWind", "Spring Boot", "MySQL", "Docker", "Next.js"],
+    image: "/images/gurePintxo/captura-1.png",
+    imageHover: "/images/gurePintxo/captura-2.png",
+    image2: "/images/gurePintxo/captura-3.png",
+    imageHover2: "/images/gurePintxo/captura-4.png",
+    demoLink: "https://gurepintxo.com",
+    linkLabel: "gurepintxo.com",
+    // Cuando esté publicada: añadir playStoreLink y quitar playStoreComingSoon
+    playStoreComingSoon: true,
+    isMobile: true,
+    featured: true,
+  },
+  {
+    title: "Taller Ortiz — gestión de taller",
+    description:
+      "Web para el dueño y app para los pintores. Órdenes de trabajo, tarifas por cliente, facturación, abonos y resúmenes en PDF/Excel. Usada a diario en el taller.",
+    highlights: [
+      "Web (Next.js + TypeScript): órdenes, clientes y tarifas, facturación y abonos, login con JWT (Zustand + Axios), pensada para usarse en tablet",
+      "App (React Native + Expo): el pintor ve y cierra sus órdenes y crea albaranes desde el móvil, sin ver precios",
+      "Backend .NET Clean Architecture + PostgreSQL desplegado en Railway (hecho por mi compañero)",
+    ],
+    tech: ["Next.js", "TypeScript", "React Native", "Expo", "Tailwind", "Zustand", "Axios", ".NET", "PostgreSQL"],
+    isPrivate: true,
+    clientLabel: "Proyecto de cliente · En producción",
+  },
   {
     title: "Surf para Dummies",
     description:
