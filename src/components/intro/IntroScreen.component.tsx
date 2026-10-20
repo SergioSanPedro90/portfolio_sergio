@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react';
 import { INTRO_SEEN_KEY } from './introSession';
 
+// Duración total de la intro (entrada + pausa + salida)
+const INTRO_DURATION_MS = 2800;
+// Fade-out final, incluido en INTRO_DURATION_MS
+const INTRO_EXIT_MS = 700;
+
 interface IntroScreenProps {
   onComplete: () => void;
 }
 
 export const IntroScreen = ({ onComplete }: IntroScreenProps) => {
-  const [lifting, setLifting] = useState(false);
+  const [leaving, setLeaving] = useState(false);
 
   useEffect(() => {
     try {
@@ -15,17 +20,14 @@ export const IntroScreen = ({ onComplete }: IntroScreenProps) => {
       // Sin sessionStorage la intro no se habría mostrado; nada que guardar
     }
 
-    // Duración total: 650 ms visible + 350 ms de salida = 1 s
-    let completeTimer: ReturnType<typeof setTimeout>;
-    const liftTimer = setTimeout(() => {
-      setLifting(true);
-      completeTimer = setTimeout(onComplete, 350);
-    }, 650);
+    // Entrada (~1,6 s) + pausa con el contenido visible + fade-out de INTRO_EXIT_MS
+    const leaveTimer = setTimeout(() => setLeaving(true), INTRO_DURATION_MS - INTRO_EXIT_MS);
+    const completeTimer = setTimeout(onComplete, INTRO_DURATION_MS);
 
     // Saltar con cualquier tecla
     window.addEventListener('keydown', onComplete);
     return () => {
-      clearTimeout(liftTimer);
+      clearTimeout(leaveTimer);
       clearTimeout(completeTimer);
       window.removeEventListener('keydown', onComplete);
     };
@@ -63,9 +65,10 @@ export const IntroScreen = ({ onComplete }: IntroScreenProps) => {
           alignItems: 'center',
           justifyContent: 'center',
           gap: '1rem',
-          transform: lifting ? 'translateY(-100%)' : 'translateY(0)',
-          transition: lifting
-            ? 'transform 0.35s cubic-bezier(0.76, 0, 0.24, 1)'
+          opacity: leaving ? 0 : 1,
+          transform: leaving ? 'translateY(-16px)' : 'translateY(0)',
+          transition: leaving
+            ? `opacity ${INTRO_EXIT_MS}ms ease, transform ${INTRO_EXIT_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`
             : 'none',
         }}
       >
@@ -88,7 +91,7 @@ export const IntroScreen = ({ onComplete }: IntroScreenProps) => {
           color: '#f5f3ef',
           letterSpacing: '-0.02em',
           lineHeight: 1,
-          animation: 'introFadeUp 0.4s ease 0.05s both',
+          animation: 'introFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both',
           position: 'relative',
         }}>
           Sergio{' '}
@@ -100,7 +103,7 @@ export const IntroScreen = ({ onComplete }: IntroScreenProps) => {
           height: '1px',
           background: '#2a52be',
           opacity: 0.6,
-          animation: 'introLine 0.3s ease 0.25s both',
+          animation: 'introLine 0.7s ease 0.6s both',
         }} />
 
         {/* Tagline */}
@@ -111,7 +114,7 @@ export const IntroScreen = ({ onComplete }: IntroScreenProps) => {
           letterSpacing: '0.25em',
           color: '#9b9690',
           textTransform: 'uppercase',
-          animation: 'introTag 0.3s ease 0.35s both',
+          animation: 'introTag 0.7s ease 0.85s both',
         }}>
           Full Stack Developer
         </p>
