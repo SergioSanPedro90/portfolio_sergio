@@ -11,7 +11,9 @@ export const ParticleBackground = () => {
 
     let animFrameId: number;
     const mouse = { x: null as number | null, y: null as number | null };
-    const COUNT = 85;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Menos nodos en pantallas pequeñas: el coste de las líneas crece con el cuadrado
+    const COUNT = window.innerWidth < 768 ? 35 : 85;
     const MAX_DIST = 140;
     // Azul que encaja con cyan/blue del portfolio pero sobre fondo claro
     const NODE_COLOR = '148, 163, 184'
@@ -106,14 +108,22 @@ export const ParticleBackground = () => {
 
     const onMouseMove = (e: MouseEvent) => { mouse.x = e.clientX; mouse.y = e.clientY; };
     const onMouseLeave = () => { mouse.x = null; mouse.y = null; };
-    const onResize = () => resize();
+    const onResize = () => {
+      resize();
+      if (reducedMotion) draw();
+    };
 
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseleave', onMouseLeave);
     window.addEventListener('resize', onResize);
-
     init();
-    loop();
+
+    // Con prefers-reduced-motion se dibuja una vez, sin animación ni seguimiento del ratón
+    if (reducedMotion) {
+      draw();
+    } else {
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseleave', onMouseLeave);
+      loop();
+    }
 
     return () => {
       cancelAnimationFrame(animFrameId);

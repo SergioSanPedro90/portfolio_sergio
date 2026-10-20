@@ -1,12 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap');
 @import "tailwindcss";
+
+/* Fuentes cargadas en index.html */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+}
 
 body {
   background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
   min-height: 100vh;
-  font-family: 'DM Mono', monospace; /* base de todo */
+  font-family: var(--font-sans);
 }
 
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
+}
+
+/* DM Mono solo para títulos de tarjeta y detalles (etiquetas, fechas) */
+h4 {
+  font-family: var(--font-mono);
 }
