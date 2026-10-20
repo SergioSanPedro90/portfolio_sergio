@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { navItems, type NavbarProps } from './navbarMenu';
 
-export const Navbar = ({ activeSection, onNavigate }: NavbarProps) => {
+export const Navbar = ({ onNavigate }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentSection, setCurrentSection] = useState(activeSection);
+  const [currentSection, setCurrentSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
